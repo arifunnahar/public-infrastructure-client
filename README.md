@@ -33,7 +33,7 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 6. Location-Based Access: Filter and submit issues specific to neighborhoods or geographic areas.
 
-<!-- 7. Role-Based Access Control: Separate interfaces and permissions for Admins, Staff, and Citizens to streamline operations. -->
+7. Role-Based Access Control: Separate interfaces and permissions for Admins, Staff, and Citizens to streamline operations.
 
 8. Communication & Feedback Tools: Enables direct interaction between citizens and officials through comments and updates.
 
