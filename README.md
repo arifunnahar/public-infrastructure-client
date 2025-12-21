@@ -31,7 +31,7 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 5. Boosted Issue Highlighting: Critical or high-priority issues are prominently displayed to accelerate attention and action.
 
 
-Location-Based Access: Filter and submit issues specific to neighborhoods or geographic areas.
+6. Location-Based Access: Filter and submit issues specific to neighborhoods or geographic areas.
 
 Role-Based Access Control: Separate interfaces and permissions for Admins, Staff, and Citizens to streamline operations.
 
