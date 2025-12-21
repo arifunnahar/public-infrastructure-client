@@ -15,7 +15,7 @@ user: {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 
 
-CivicHelp Desk – Key Features
+ ---------------About CivicHelp Desk --------------
 
 Intuitive User Dashboard: Provides a clean, easy-to-navigate interface for citizens to manage and track their requests.
 
@@ -42,3 +42,6 @@ Data Analytics & Reporting: Generate insights on recurring civic issues and moni
 Secure Authentication & Privacy: Ensures user data is protected and access is securely managed.
 
 Responsive Design: Fully optimized for desktop, tablet, and mobile devices for seamless access anywhere.
+
+
+
