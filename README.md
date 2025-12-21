@@ -41,7 +41,7 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 10. Notifications & Alerts: Automated notifications via email or in-app messages keep users informed on progress.
 
-Data Analytics & Reporting: Generate insights on recurring civic issues and monitor departmental performance.
+11. Data Analytics & Reporting: Generate insights on recurring civic issues and monitor departmental performance.
 
 Secure Authentication & Privacy: Ensures user data is protected and access is securely managed.
 
