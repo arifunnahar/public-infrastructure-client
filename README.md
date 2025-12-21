@@ -35,7 +35,7 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 <!-- 7. Role-Based Access Control: Separate interfaces and permissions for Admins, Staff, and Citizens to streamline operations. -->
 
-Communication & Feedback Tools: Enables direct interaction between citizens and officials through comments and updates.
+8. Communication & Feedback Tools: Enables direct interaction between citizens and officials through comments and updates.
 
 Advanced Search & Filtering: Quickly locate issues by category, status, priority, or location.
 
