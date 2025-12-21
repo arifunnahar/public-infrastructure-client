@@ -37,9 +37,9 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 8. Communication & Feedback Tools: Enables direct interaction between citizens and officials through comments and updates.
 
-Advanced Search & Filtering: Quickly locate issues by category, status, priority, or location.
+9. Advanced Search & Filtering: Quickly locate issues by category, status, priority, or location.
 
-Notifications & Alerts: Automated notifications via email or in-app messages keep users informed on progress.
+10. Notifications & Alerts: Automated notifications via email or in-app messages keep users informed on progress.
 
 Data Analytics & Reporting: Generate insights on recurring civic issues and monitor departmental performance.
 
