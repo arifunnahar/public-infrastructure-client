@@ -15,7 +15,7 @@ user: {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 
 
- ---------------About CivicHelp Desk --------------
+ -----------------------------
 
 Intuitive User Dashboard: Provides a clean, easy-to-navigate interface for citizens to manage and track their requests.
 
