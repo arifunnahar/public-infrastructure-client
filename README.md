@@ -43,4 +43,6 @@ Data Analytics & Reporting: Generate insights on recurring civic issues and moni
 Secure Authentication & Privacy: Ensures user data is protected and access is securely managed.
 
 
+Responsive Design: Fully optimized for desktop, tablet, and mobile devices for seamless access anywhere.
+
 
