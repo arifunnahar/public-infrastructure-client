@@ -38,9 +38,6 @@ const MyIssuesPage = () => {
 
 
 
-
-
-
   // Load My Issues
   const { data: issues = [], isLoading } = useQuery({
     queryKey: ["myIssues", user?.email],
@@ -261,14 +258,7 @@ const MyIssuesPage = () => {
 
                        
 
-                        {/* {issue.status === "pending" && (
-                          <button
-                            onClick={() => openEditModal(issue)}
-                            className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 text-xs"
-                          >
-                            Edit
-                          </button>
-                        )} */}
+                       
 
 
                   {issue.status === "pending" && (

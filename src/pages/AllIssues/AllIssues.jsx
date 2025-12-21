@@ -48,6 +48,8 @@ const AllIssues = () => {
     setCurrentPage(1);
   };
 
+
+  
   // Sort
 
 const sortedIssues = issues
@@ -64,13 +66,13 @@ const sortedIssues = issues
     if (a.priority === "high" && b.priority !== "high") return -1;
     if (a.priority !== "high" && b.priority === "high") return 1;
 
-    //  Newest 
+    //  New
     return new Date(b.createdAt) - new Date(a.createdAt);
   });
 
 
 
-  
+
   // Pagination
   const totalPages = Math.ceil(sortedIssues?.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;

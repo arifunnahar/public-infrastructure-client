@@ -171,7 +171,7 @@ const StaffDashboardHome = () => {
   );
 };
 
-/* ================= REUSABLE COMPONENTS ================= */
+/* ------------------Reusable Component -------------*/
 
 const StatCard = ({ title, value, color }) => {
   const bg = {

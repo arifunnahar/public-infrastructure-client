@@ -71,7 +71,7 @@ const ManageUsers = () => {
             </tr>
           </thead>
 
-          {/* Table Body */}
+          {/* Table body */}
           <tbody>
             {users.length === 0 ? (
               <tr>

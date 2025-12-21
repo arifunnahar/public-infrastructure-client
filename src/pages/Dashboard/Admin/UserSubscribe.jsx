@@ -24,7 +24,7 @@ const UserSubscribe = () => {
 
     try {
       const response = await axios.post(
-        " https://public-infrastructure-server.vercel.app/create-checkout-subscribe-session",
+        "https://public-infrastructure-server.vercel.app/create-checkout-subscribe-session",
         {
           email: user.email,
           amount: 1000,

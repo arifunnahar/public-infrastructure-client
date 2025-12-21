@@ -8,9 +8,6 @@ const SubscriptionModal = ({ isOpen, closeModal, handleSubscribe, isLoading }) =
 
 
 
-
-
-
   return (
     <Dialog open={isOpen} onClose={closeModal} className="relative z-50">
       <div className="fixed inset-0 " />

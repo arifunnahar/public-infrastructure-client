@@ -51,7 +51,7 @@ const Payments = () => {
 
   return (
     <div className="p-6">
-      {/* Header */}
+     
       <h2 className="text-xl font-bold mb-4">
         All Payments ({filteredPayments.length})
       </h2>

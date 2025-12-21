@@ -35,8 +35,12 @@ const ReportIssueForm = () => {
     enabled: !!user?.email
   });
 
+
+
   // Block Check 
   const isBlocked = userInfo?.isBlocked;
+
+
 
   // Check free user limit
   useEffect(() => {
@@ -140,7 +144,7 @@ const ReportIssueForm = () => {
           <select
             {...register('category', { required: true })}
             className="select w-full"
-            disabled={limitExceeded || isBlocked} // **Disabled if blocked**
+            disabled={limitExceeded || isBlocked} 
           >
             <option value="">Select Category</option>
             <option value="Road Damage">Road Damage</option>
@@ -161,7 +165,7 @@ const ReportIssueForm = () => {
             {...register('location', { required: true })}
             className="input w-full"
             placeholder="Location"
-            disabled={limitExceeded || isBlocked} // **Disabled if blocked**
+            disabled={limitExceeded || isBlocked} 
           />
           {errors.location && <p className="text-red-500">Location is required.</p>}
         </div>
@@ -174,7 +178,7 @@ const ReportIssueForm = () => {
             className="textarea w-full"
             rows="4"
             placeholder="Describe the issue"
-            disabled={limitExceeded || isBlocked} // **Disabled if blocked**
+            disabled={limitExceeded || isBlocked} 
           ></textarea>
           {errors.description && <p className="text-red-500">Description is required.</p>}
         </div>
@@ -187,7 +191,7 @@ const ReportIssueForm = () => {
             {...register('image', { required: true })}
             className="file-input w-full"
             accept="image/*"
-            disabled={limitExceeded || isBlocked} // **Disabled if blocked**
+            disabled={limitExceeded || isBlocked} 
           />
           {errors.image && <p className="text-red-500">Image is required.</p>}
         </div>
@@ -201,7 +205,7 @@ const ReportIssueForm = () => {
           {isBlocked ? "Submission Restricted" : "Submit Issue"}
         </button>
 
-        {/* Subscribe Button (Shown only if limit exceeded and not blocked) */}
+        {/* Subscribe Button shown only if limit exceeded and not blocked) */}
         {!isBlocked && limitExceeded && (
           <div className="mt-4 text-center">
             <p className="text-red-500 mb-2">

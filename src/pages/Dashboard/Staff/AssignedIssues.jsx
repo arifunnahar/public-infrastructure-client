@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import toast, { Toaster } from "react-hot-toast";
 
-// Status flow rules
+// Status flow 
 const statusOptions = {
   pending: ["in-progress"],
   "in-progress": ["working"],
@@ -12,7 +12,7 @@ const statusOptions = {
   closed: [],
 };
 
-// Color status priority
+// Color  priority
 const statusColors = {
   pending: "bg-gray-200 text-gray-800",
   "in-progress": "bg-yellow-200 text-yellow-800",
@@ -43,11 +43,11 @@ const AssignedIssues = () => {
         if (a.priority === "high" && b.priority !== "high") return -1;
         if (a.priority !== "high" && b.priority === "high") return 1;
 
-        // 2. Boosted issues next
+        //  Boosted issues next
         if (b.boosted && !a.boosted) return 1;
         if (a.boosted && !b.boosted) return -1;
 
-        // 3. Most recent )
+        // Most recent )
         if (a.createdAt && b.createdAt) return new Date(b.createdAt) - new Date(a.createdAt);
 
         return 0;
@@ -162,7 +162,7 @@ const AssignedIssues = () => {
                   </span>
                 </td>
 
-                {/* <td className="px-4 py-3">{issue.assignedStaff?.name || "N/A"}</td> */}
+          
 
            <td className="px-4 py-3">
               {issue.status === "resolved" ? (

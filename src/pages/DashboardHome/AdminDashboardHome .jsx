@@ -85,7 +85,8 @@ const AdminDashboardHome = () => {
 
       {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Issues Status Pie Chart */}
+
+        {/* Pie Chart */}
         <div className="bg-green-50 p-4 rounded-xl shadow-md">
           <h3 className="text-lg font-semibold mb-4 text-gray-700">Issues Status</h3>
           <ResponsiveContainer width="100%" height={300}>
@@ -109,7 +110,7 @@ const AdminDashboardHome = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Total Payments Bar Chart */}
+        {/*  Bar Chart */}
         <div className="bg-green-50 p-4 rounded-xl shadow-md">
           <h3 className="text-lg font-semibold mb-4 text-gray-700">Total Payments</h3>
           <ResponsiveContainer width="100%" height={300}>
@@ -123,7 +124,7 @@ const AdminDashboardHome = () => {
         </div>
       </div>
 
-      {/* Latest Items */}
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Latest Issues */}
         <div className="bg-green-50 p-4 rounded-xl shadow-md">

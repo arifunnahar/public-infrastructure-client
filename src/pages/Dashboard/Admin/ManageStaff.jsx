@@ -19,9 +19,7 @@ const ManageStaff = () => {
 
   const fetchStaff = async () => {
     try {
-      const res = await axios.get(
-        " https://public-infrastructure-server.vercel.app/staff"
-      );
+      const res = await axios.get("https://public-infrastructure-server.vercel.app/staff");
       setStaffList(res.data);
     } catch (err) {
       console.error("Fetch Staff Error:", err);
@@ -103,10 +101,7 @@ const ManageStaff = () => {
           uid: userCredential.user.uid,
         };
 
-        await axios.post(
-          " https://public-infrastructure-server.vercel.app/staff",
-          newStaff
-        );
+        await axios.post(" https://public-infrastructure-server.vercel.app/staff", newStaff);
         toast.success("Staff added successfully");
       }
 
@@ -143,9 +138,7 @@ const ManageStaff = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(
-            ` https://public-infrastructure-server.vercel.app/staff/${staff._id}`
-          );
+          await axios.delete(`https://public-infrastructure-server.vercel.app/staff/${staff._id}`);
           toast.success("Staff deleted successfully");
           setStaffList(staffList.filter((s) => s._id !== staff._id));
         } catch (err) {
@@ -312,4 +305,4 @@ const ManageStaff = () => {
 };
 
 export default ManageStaff;
-// ,,,,,
+
