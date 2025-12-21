@@ -24,9 +24,9 @@ user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}
 
 2. Comprehensive Issue Submission: Citizens can report civic issues with detailed descriptions, images, and location information.
 
-Real-Time Issue Tracking: Monitor the progress of submitted issues through live status updates.
+3. Real-Time Issue Tracking: Monitor the progress of submitted issues through live status updates.
 
-Priority & Urgency Management: Classify issues based on urgency (low, medium, high) to ensure timely resolution.
+4. Priority & Urgency Management: Classify issues based on urgency (low, medium, high) to ensure timely resolution.
 
 Boosted Issue Highlighting: Critical or high-priority issues are prominently displayed to accelerate attention and action.
 
