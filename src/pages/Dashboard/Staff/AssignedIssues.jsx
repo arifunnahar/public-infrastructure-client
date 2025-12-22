@@ -43,7 +43,7 @@ const AssignedIssues = () => {
         if (a.priority === "high" && b.priority !== "high") return -1;
         if (a.priority !== "high" && b.priority === "high") return 1;
 
-        //  Boosted issues next
+        //  Boosted 
         if (b.boosted && !a.boosted) return 1;
         if (a.boosted && !b.boosted) return -1;
 

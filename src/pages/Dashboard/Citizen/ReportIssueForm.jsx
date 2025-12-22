@@ -170,7 +170,7 @@ const ReportIssueForm = () => {
           {errors.location && <p className="text-red-500">Location is required.</p>}
         </div>
 
-        {/* Description */}
+    
         <div>
           <label className="block mb-2 font-medium">Description</label>
           <textarea
@@ -205,7 +205,7 @@ const ReportIssueForm = () => {
           {isBlocked ? "Submission Restricted" : "Submit Issue"}
         </button>
 
-        {/* Subscribe Button shown only if limit exceeded and not blocked) */}
+        {/* Subscribe Button shown only if limit exceeded  */}
         {!isBlocked && limitExceeded && (
           <div className="mt-4 text-center">
             <p className="text-red-500 mb-2">
