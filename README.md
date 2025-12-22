@@ -4,7 +4,7 @@
 
 Admin: {email: 'arifunnaharlipi2022@gmail.com', password: '123456Aa@#'}
 
-Staff: email: 'honey@nuts.com', password: '123456Aa@#'
+Staff:  email: 'honey@nuts.com', password: '123456Aa@#'
 
 
 user:  {email: 'arifunn43@gmail.com', password: '123456Aa@#'}

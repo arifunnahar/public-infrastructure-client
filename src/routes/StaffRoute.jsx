@@ -10,7 +10,7 @@ const StaffRoute = ({ children }) => {
 
   if (isRoleLoading) return <LoadingSpinner />
   if (role === 'staff') return children
-  return <Navigate to='/' replace={true} />
+  return <Navigate to='/' replace="true" />
 }
 
 export default StaffRoute;
