@@ -51,14 +51,14 @@ const AssignStaffModal = ({ issue, close, axiosSecure, allIssues, onAssignSucces
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50 bg-black/50 backdrop-blur-sm p-4">
-      <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md">
-        <h3 className="text-lg font-bold mb-4 border-b pb-2 text-gray-800">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl w-full max-w-md">
+        <h3 className="text-lg font-bold mb-4 border-b pb-2 text-gray-800 dark:text-gray-100">
           Assign Staff to: <span className="text-blue-600 font-bold">{issue.title}</span>
         </h3>
         <div className="max-h-60 overflow-y-auto space-y-2">
           {staffList.map((staff) => (
-            <div key={staff._id} className="flex justify-between items-center p-3 bg-gray-50 rounded-md border">
-              <span className="font-medium text-gray-700">{staff.name}</span>
+            <div key={staff._id} className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-md border">
+              <span className="font-medium text-gray-700  dark:text-gray-200">{staff.name}</span>
               <button
                 disabled={staff.isBusy}
                 onClick={() => handleAssign(staff)}
@@ -73,7 +73,7 @@ const AssignStaffModal = ({ issue, close, axiosSecure, allIssues, onAssignSucces
         </div>
         <button
           onClick={close}
-          className="mt-6 w-full py-2 bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition"
+          className="mt-6 w-full py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-300  transition"
         >
           Cancel
         </button>
@@ -120,12 +120,12 @@ const ViewAllIssues = () => {
   const sortedIssues = [...issues].sort((a, b) => (a.boost === b.boost ? 0 : a.boost ? -1 : 1));
 
   return (
-    <div className="p-6 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto rounded-xl shadow-lg  p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 ">View All Issues</h1>
+    <div className="p-6 bg-white dark:bg-gray-900 min-h-screen">
+      <div className="max-w-7xl mx-auto rounded-xl  dark:bg-gray-800 shadow-lg  p-6">
+        <h1 className="text-2xl font-bold text-gray-800 mb-6 dark:text-gray-100">View All Issues</h1>
         <div className="overflow-x-auto rounded-lg ">
           <table className="w-full text-sm text-left">
-            <thead className="bg-gray-200 text-gray-600 font-bold text-[16px] ">
+            <thead className="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-200 font-bold text-[16px] ">
               <tr>
                 <th className="p-4">No</th>
                 <th className="p-4">Issue Details</th>
@@ -139,12 +139,12 @@ const ViewAllIssues = () => {
               {sortedIssues.map((issue, index) => (
                 <tr
                   key={issue._id}
-                  className={`hover:bg-blue-50 transition-colors ${issue.boost ? "bg-yellow-50" : "bg-gray-100"}`}
+                  className={`hover:bg-blue-50  dark:hover:bg-blue-900 transition-colors ${issue.boost ? "bg-yellow-50 dark:bg-yellow-900" : "bg-gray-100 dark:bg-gray-800"}`}
                 >
-                  <td className="p-2 text-gray-500 font-medium">{index + 1}</td>
+                  <td className="p-2 text-gray-500 font-medium  dark:text-gray-300">{index + 1}</td>
                   <td className="p-2">
-                    <p className="font-semibold text-gray-800 text-[16px]">{issue.title}</p>
-                    <span className="text-[12px] text-gray-700 tracking-widest">{issue.category}</span>
+                    <p className="font-semibold text-gray-800 dark:text-gray-100 text-[16px]">{issue.title}</p>
+                    <span className="text-[12px] text-gray-700 dark:text-gray-300 tracking-widest">{issue.category}</span>
                   </td>
                   <td className="p-2">
                     <span
@@ -170,9 +170,9 @@ const ViewAllIssues = () => {
                   </td>
                   <td className="p-2">
                     {issue.assignedStaff ? (
-                      <span className="font-bold text-[16px]  text-blue-600">{issue.assignedStaff.name}</span>
+                      <span className="font-bold text-[16px]  text-blue-600 dark:text-blue-400">{issue.assignedStaff.name}</span>
                     ) : (
-                      <span className="text-gray-700 italic text-[14px]">Not Assigned</span>
+                      <span className="text-gray-700 dark:text-gray-300 italic text-[14px]">Not Assigned</span>
                     )}
                   </td>
                   <td className="p-2 text-center">

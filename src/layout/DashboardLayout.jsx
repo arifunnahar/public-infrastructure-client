@@ -28,9 +28,9 @@ const DashboardLayout = () => {
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             
             {/* Main content */}
-            <div className="drawer-content">
+            <div className="drawer-content  flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             
-                <nav className="navbar w-full bg-base-300">
+                <nav className="navbar w-full bg-base-300 dark:bg-gray-800">
                     <label htmlFor="my-drawer-4" className="btn btn-square btn-ghost">
                         {/* Sidebar toggle icon */}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor" className="my-1.5 inline-block size-4">
@@ -49,13 +49,13 @@ const DashboardLayout = () => {
             {/* Sidebar */}
             <div className="drawer-side is-drawer-close:overflow-visible">
                 <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-                <div className="flex min-h-full flex-col justify-between bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
+                <div className="flex min-h-full flex-col justify-between bg-base-200 dark:bg-gray-800 is-drawer-close:w-14 is-drawer-open:w-64">
                     
                     {/* Top Menu Items */}
             <ul className="menu w-full grow">
               
                         <li>
-                            <Link to="/" className="flex items-center w-full px-4 mb-2 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Home">
+                            <Link to="/" className="flex items-center w-full px-4 mb-2 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Home">
                                <img src={logo2} alt="logo" className='w-12  h-12 object-contain' />
                                 <span className="ml-3 is-drawer-close:hidden">Homepage</span>
                             </Link>
@@ -67,7 +67,7 @@ const DashboardLayout = () => {
             
             
               <li>
-                  <Link to="/dashboard" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="Dashboard">
+                  <Link to="/dashboard" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="Dashboard">
                       <RiKeyboardBoxLine className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Dashboard</span>
                   </Link>
@@ -77,7 +77,7 @@ const DashboardLayout = () => {
               
                {role === 'admin' && <>  <li>
 
-                   <Link to="/dashboard/view-all-issues" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="ViewAllIssues">
+                   <Link to="/dashboard/view-all-issues" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="ViewAllIssues">
                       <FaBoxTissue className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">View All Issues</span>
                   </Link>
@@ -88,7 +88,7 @@ const DashboardLayout = () => {
 
           
               <li>
-                  <Link to="/dashboard/manage-staff" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="ManageStaff">
+                  <Link to="/dashboard/manage-staff" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right"  data-tip="ManageStaff">
                       <FaUserAlt className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Manage Staff</span>
                   </Link>
@@ -97,7 +97,7 @@ const DashboardLayout = () => {
 
               
                 <li>
-                <Link to="/dashboard/manage-users" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="ManageUsers">
+                <Link to="/dashboard/manage-users" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="ManageUsers">
                       <FaUsers className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Manage Users</span>
                   </Link>
@@ -109,7 +109,7 @@ const DashboardLayout = () => {
                <li>
                   <Link
                     to="/dashboard/payments"
-                    className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payments"
+                    className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payments"
                   >
                     <MdPayments className="w-5 h-5" />
                     <span className="ml-3 is-drawer-close:hidden">Payments</span>
@@ -123,7 +123,7 @@ const DashboardLayout = () => {
 {/* staff--------------1 Menu------------------------ */}
 
                {role === 'staff' && <> <li>
-                <Link to="/dashboard/assigned-issues" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="AssignedIssue">
+                <Link to="/dashboard/assigned-issues" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="AssignedIssue">
                      <MdAssignmentTurnedIn  className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Assigned Issue</span>
                   </Link>
@@ -138,7 +138,7 @@ const DashboardLayout = () => {
               {role === 'user' && <>
                 
                  <li>
-                <Link to="/dashboard/my-issues-page" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="MyIssues">
+                <Link to="/dashboard/my-issues-page" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="MyIssues">
                       <FaPersonChalkboard className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">My Issues</span>
                   </Link>
@@ -147,7 +147,7 @@ const DashboardLayout = () => {
              {/* Report Issue form */}
 
           <li>
-               <Link to="/dashboard/report-issue" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="ReportIssue">
+               <Link to="/dashboard/report-issue" className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="ReportIssue">
                       <AiOutlineForm className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Report Issue</span>
                   </Link>
@@ -165,7 +165,7 @@ const DashboardLayout = () => {
                     {/* Profile Link */}
                     <Link
                       to="/dashboard/profile"
-                      className="flex items-center w-full px-4 py-2 hover:bg-gray-300 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Profile">
+                      className="flex items-center w-full px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Profile">
                       <FcSettings className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Profile</span>
                     </Link>
@@ -173,7 +173,7 @@ const DashboardLayout = () => {
                     {/* Logout Button */}
                     <button
                       onClick={handleLogOut}
-                      className="flex items-center w-full px-4 py-2 mt-2 hover:bg-gray-300 rounded "
+                      className="flex items-center w-full px-4 py-2 mt-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded "
                     >
                       <GrLogout className="w-5 h-5" />
                       <span className="ml-3 is-drawer-close:hidden">Logout</span>

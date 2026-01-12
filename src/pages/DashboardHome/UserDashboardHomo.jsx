@@ -47,7 +47,7 @@ const UserDashboardHomo = () => {
   ];
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="p-6 bg-gray-100 dark:bg-gray-800 min-h-screen">
       <h1 className="text-2xl font-bold mb-6">Citizen Dashboard</h1>
 
       {/* Cards */}
@@ -61,7 +61,7 @@ const UserDashboardHomo = () => {
       </div>
 
       {/* Chart */}
-      <div className="bg-white p-6 rounded-lg shadow">
+      <div className="bg-white dark:bg-gray-900  p-6 rounded-lg shadow">
         <h2 className="text-2xl font-bold mb-4">Issue Status Chart</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={chartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>

@@ -52,15 +52,15 @@ const ManageUsers = () => {
   if (isLoading) return <div className="p-10 text-center font-bold text-blue-600 italic">Loading users...</div>;
 
   return (
-    <div className="p-6">
+    <div className="p-6 transition-colors duration-300 text-gray-900 dark:text-gray-100">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Manage Users ({users.length})</h2>
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Manage Users ({users.length})</h2>
       </div>
 
-      <div className="overflow-x-auto shadow-2xl rounded-xl border border-gray-100">
+      <div className="overflow-x-auto shadow-2xl rounded-xl border dark:border-gray-700">
         <table className="table w-full border-collapse">
           {/* Table Head */}
-          <thead className="bg-gray-100 text-gray-700">
+          <thead className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
             <tr>
               <th className="py-4 px-4 text-left">No</th>
               <th className="text-left">Name</th>
@@ -83,15 +83,15 @@ const ManageUsers = () => {
               users.map((user, index) => (
                 <tr 
                   key={user._id} 
-                  className={`border-b transition-colors hover:bg-blue-50/30 ${user.isBlocked ? 'bg-red-50/40' : 'bg-white'}`}
+                  className={`border-b transition-colors hover:bg-blue-50/30  dark:hover:bg-blue-900/20 ${user.isBlocked ? 'bg-red-50/40 dark:bg-red-900/30' : 'bg-white dark:bg-gray-900'}`}
                 >
-                  <td className="p-4 font-semibold text-gray-500">{index + 1}</td>
+                  <td className="p-4 font-semibold text-gray-500 dark:text-gray-400">{index + 1}</td>
                   <td className="p-4">
-                    <div className="font-bold text-gray-800">
+                    <div className="font-bold text-gray-800  dark:text-gray-100">
                       {user.displayName || "Anonymous User"}
                     </div>
                   </td>
-                  <td className="p-4 text-gray-600">{user.email}</td>
+                  <td className="p-4 text-gray-600 dark:text-gray-300">{user.email}</td>
 
                   {/* Subscription Info */}
                   <td className="p-4">

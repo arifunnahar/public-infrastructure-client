@@ -74,30 +74,30 @@ const BoostModal = ({ isOpen, closeModal, issue }) => {
       <div className="fixed inset-0 bg-black/40" />
 
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <DialogPanel className="max-w-md w-full bg-white rounded-xl p-6 space-y-5">
+        <DialogPanel className="max-w-md w-full bg-white dark:bg-gray-800 rounded-xl p-6 space-y-5">
           <DialogTitle className="text-2xl font-bold flex items-center gap-2">
             <MdBolt className="text-amber-600" />
             Boost Your Issue
           </DialogTitle>
 
           {/* Issue Info */}
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             Issue ID: <b>{_id}</b>
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             You're boosting the issue: <b>{title}</b>
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600  dark:text-gray-400 leading-relaxed">
             Category: <b>{category}</b>
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             Current Priority: <b>{priority}</b>
           </p>
 
-          <p className="text-gray-600 leading-relax">
+          <p className="text-gray-600 dark:text-gray-400 leading-relax">
             Boosting this issue will:
           </p>
-          <ul className="list-disc pl-5 text-gray-700 space-y-1">
+          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-500 space-y-1">
             <li>Move the issue to the top</li>
             <li>
               Set priority to <b>High</b>
@@ -106,7 +106,7 @@ const BoostModal = ({ isOpen, closeModal, issue }) => {
           </ul>
 
           {/* Boost Amount Input */}
-          <div className="bg-gray-100 p-4 rounded-lg flex flex-col gap-2">
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg flex flex-col gap-2">
             <label className="font-semibold">Boost Amount</label>
             <input
               type="number"
@@ -121,7 +121,7 @@ const BoostModal = ({ isOpen, closeModal, issue }) => {
           <div className="flex justify-end gap-3 pt-4">
             <button
               onClick={closeModal}
-              className="px-5 py-2 bg-gray-300 rounded-lg"
+              className="px-5 py-2 bg-gray-300 dark:bg-gray-600 rounded-lg"
             >
               Cancel
             </button>

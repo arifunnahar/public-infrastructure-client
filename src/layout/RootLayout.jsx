@@ -7,6 +7,7 @@ import FeaturesSection from '../pages/Shared/Footer/FeaturesSection';
 import HowItWorks from '../pages/Shared/Footer/HowItWorks';
 import TestimonialsSection from '../pages/Shared/Footer/TestimonialsSection';
 import CTASection from '../pages/Shared/Footer/CTASection';
+import HomePage from '../pages/HomePage/HomePage';
 
 const RootLayout = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const RootLayout = () => {
          {homePage && <HowItWorks />}
         {homePage && <TestimonialsSection />}
         {homePage && <CTASection/>}
+        {homePage && <HomePage/>}
       </main>
 
       {/* Footer */}

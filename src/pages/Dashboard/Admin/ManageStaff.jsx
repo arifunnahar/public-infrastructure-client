@@ -154,7 +154,7 @@ const ManageStaff = () => {
       <Toaster />
 
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-800">Manage Staff</h2>
+        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">Manage Staff</h2>
         <button
           onClick={() => {
             setEditStaff(null);
@@ -168,9 +168,9 @@ const ManageStaff = () => {
         </button>
       </div>
 
-      <div className="overflow-x-auto bg-white shadow rounded-lg">
+      <div className="overflow-x-auto bg-white dark:bg-gray-800  shadow rounded-lg">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-200">
+          <thead className="bg-gray-200 dark:bg-gray-800">
             <tr>
               <th className="px-6 py-3">No</th>
               <th className="px-6 py-3">Photo</th>
@@ -180,7 +180,7 @@ const ManageStaff = () => {
               <th className="px-6 py-3 text-center">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-gray-100 divide-y divide-gray-200">
+          <tbody className="bg-gray-100 dark:bg-gray-900 divide-y divide-gray-200">
             {staffList.map((staff, index) => (
               <tr key={staff._id}>
                 <td className="px-6 py-4">{index + 1}</td>

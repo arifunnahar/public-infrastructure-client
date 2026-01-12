@@ -85,13 +85,13 @@ const AssignedIssues = () => {
     );
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
+    <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
       <Toaster />
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Assigned Issues</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Assigned Issues</h2>
 
       {/* Filters */}
       <div className="flex flex-wrap gap-4 mb-6 items-center">
-        <div className="flex items-center gap-2 text-gray-700">
+        <div className="flex items-center gap-2 text-gray-700 dark:text-white">
           <span className="font-medium">Filters:</span>
         </div>
 
@@ -128,20 +128,20 @@ const AssignedIssues = () => {
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-gray-200">
-          <thead className="bg-gray-200">
+        <table className="min-w-full divide-gray-200 ">
+          <thead className="bg-gray-200 dark:bg-gray-800">
             <tr>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">No</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Title</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Category</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Priority</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Status</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Assigned Staff</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Action</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">No</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Title</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Category</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Priority</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Status</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Assigned Staff</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-white">Action</th>
             </tr>
           </thead>
 
-          <tbody className="bg-gray-100">
+          <tbody className="bg-gray-100 dark:bg-gray-900">
             {issues.map((issue,index) => (
               <tr key={issue._id} className={issue.boosted ? "bg-yellow-50" : ""}>
                 <td className="px-4 py-3">{index+1}</td>

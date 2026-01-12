@@ -44,14 +44,14 @@ const SubscriptionSuccess = () => {
   }, [search, navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100 px-4">
-      <div className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-gray-900 dark:to-purple-900 px-4 transition-colors">
+      <div className="bg-white dark:bg-gray-800 w-full max-w-md rounded-2xl shadow-xl p-8 text-center">
         {status === "loading" && (
           <>
             <div className="flex justify-center mb-4">
               <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
-            <h2 className="text-xl font-semibold text-gray-800">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
               Processing Payment
             </h2>
             <p className="text-gray-500 mt-2">

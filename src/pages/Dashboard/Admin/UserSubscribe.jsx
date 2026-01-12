@@ -45,12 +45,12 @@ const UserSubscribe = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50 mt-10">
-      <div className="bg-white rounded-2xl shadow-2xl p-10 max-w-md text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50  dark:bg-gray-800 mt-10">
+      <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-2xl p-10 max-w-md text-center">
+        <h1 className="text-4xl font-bold text-gray-800  dark:text-gray-100 mb-4">
           Subscribe Now!
         </h1>
-        <p className="text-gray-600 mb-6">Pay 1000 to become a premium user.</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">Pay 1000 to become a premium user.</p>
 
         {error && <p className="text-red-500 mb-3">{error}</p>}
         <div className="flex gap-4">

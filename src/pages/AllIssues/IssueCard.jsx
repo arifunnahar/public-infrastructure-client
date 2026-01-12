@@ -144,7 +144,7 @@ const IssueCard = ({ issue = {} }) => {
 
   return (
     <motion.div
-      className="card bg-gray-200 shadow-md rounded-2xl overflow-hidden border border-yellow-200"
+      className="card bg-gray-200  dark:bg-gray-900 shadow-md rounded-2xl overflow-hidden border border-yellow-200"
       whileHover={{ scale: 1.05 }}
     >
       <figure className="p-2 relative">

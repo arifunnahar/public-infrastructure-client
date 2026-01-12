@@ -31,7 +31,7 @@ const StaffDashboardHome = () => {
   });
 
   if (isLoading) {
-    return <p className="text-center mt-20">Loading dashboard...</p>;
+    return <p className="text-center mt-20 dark:text-gray-300">Loading dashboard...</p>;
   }
 
   const {
@@ -49,8 +49,8 @@ const StaffDashboardHome = () => {
   ];
 
   return (
-    <div className="p-6 space-y-10">
-
+    <div className="p-6 space-y-10  text-gray-900 dark:text-gray-100">
+        <h1 className="text-2xl font-bold mb-6">Staff Dashboard</h1>
      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <StatCard
@@ -74,10 +74,10 @@ const StaffDashboardHome = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
         {/* -------- Issue Status Overview -------- */}
-        <div className="bg-gradient-to-br from-white to-green-50 rounded-2xl shadow-xl p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-colors duration-300">
           <div className="flex justify-between items-center mb-6">
             <div>
-              <h2 className="text-xl font-bold text-gray-800">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                 Issue Status Overview
               </h2>
               <p className="text-sm text-gray-500">
@@ -112,18 +112,18 @@ const StaffDashboardHome = () => {
         </div>
 
         {/* -------- Todays Assigned Tasks -------- */}
-        <div className="bg-white rounded-2xl shadow-xl p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-colors duration-300">
           <div className="flex justify-between items-center mb-5">
-            <h2 className="text-xl font-bold text-gray-800">
+            <h2 className="text-xl font-bold  text-gray-800 dark:text-gray-100">
               Today’s Assigned Tasks
             </h2>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               Total: {todayTasks.length}
             </span>
           </div>
 
           {todayTasks.length === 0 ? (
-            <div className="text-center py-10 text-gray-400">
+            <div className="text-center py-10 text-gray-400  dark:text-gray-500">
                No tasks assigned today
             </div>
           ) : (

@@ -145,7 +145,7 @@ const IssueDetails = () => {
   if (!issue) return <div className="text-center py-20">Issue not found</div>;
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-gray-200 rounded-2xl mt-20">
+    <div className="max-w-7xl mx-auto p-6 bg-gray-200 dark:bg-gray-800 rounded-2xl mt-20">
       <Toaster position="top-center" reverseOrder={false} />
 
       <Dialog open={isBoostOpen} onClose={() => setIsBoostOpen(false)} className="relative z-50">
@@ -167,7 +167,7 @@ const IssueDetails = () => {
       <Dialog open={isEditOpen} onClose={() => setIsEditOpen(false)} className="relative z-50">
         <div className="fixed inset-0 bg-black/40"></div>
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="max-w-lg w-full bg-white p-8 rounded-xl space-y-6">
+          <DialogPanel className="max-w-lg w-full bg-white dark:bg-gray-700 p-8 rounded-xl space-y-6">
             <DialogTitle className="text-2xl font-bold">Edit Issue</DialogTitle>
             <div className="space-y-4">
               <label className="font-semibold">Title</label>
@@ -192,7 +192,7 @@ const IssueDetails = () => {
       <Dialog open={isDeleteOpen} onClose={() => setIsDeleteOpen(false)} className="relative z-50">
         <div className="fixed inset-0 bg-black/40"></div>
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="max-w-md bg-white p-8 rounded-xl">
+          <DialogPanel className="max-w-md bg-white dark:bg-gray-700 p-8 rounded-xl">
             <DialogTitle className="text-xl font-bold text-red-600">Delete Issue</DialogTitle>
             <p className="mt-3">Are you sure you want to delete this issue permanently?</p>
             <div className="flex justify-end gap-4 mt-6">
@@ -216,7 +216,7 @@ const IssueDetails = () => {
 
         <div className="flex-1 space-y-6">
           <h1 className="text-4xl font-bold">{issue.title}</h1>
-          <p className="text-gray-800 font-semibold text-[22px]">Category: {issue.category}</p>
+          <p className="text-gray-800 dark:text-gray-200 font-semibold text-[22px]">Category: {issue.category}</p>
           <p className="text-lg">{issue.description}</p>
 
           <div className="space-y-4 text-lg">
@@ -236,13 +236,13 @@ const IssueDetails = () => {
           </div>
 
           {(issue.timeline || []).length > 0 && (
-            <div className="mt-6 p-4 bg-amber-100 rounded-lg shadow space-y-2">
+            <div className="mt-6 p-4 bg-amber-100 dark:bg-gray-700 rounded-lg shadow space-y-2">
               <h2 className="font-bold text-lg">Timeline</h2>
               {issue.timeline
                 .slice()
                 .sort((a, b) => new Date(b.date || b.time || b.createdAt) - new Date(a.date || a.time || a.createdAt))
                 .map((t, idx) => (
-                  <div key={idx} className="text-sm text-gray-700 flex items-center gap-2">
+                  <div key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2">
                     {t.action === "boost" && <MdBolt className="text-amber-600" />}
                     <span>{new Date(t.date || t.time || t.createdAt).toLocaleString()} - {t.message}</span>
                   </div>

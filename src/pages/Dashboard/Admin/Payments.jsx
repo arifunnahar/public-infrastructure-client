@@ -50,7 +50,7 @@ const Payments = () => {
   );
 
   return (
-    <div className="p-6">
+    <div className="p-6  text-gray-900 dark:text-gray-100 transition-colors duration-300">
      
       <h2 className="text-xl font-bold mb-4">
         All Payments ({filteredPayments.length})
@@ -58,14 +58,14 @@ const Payments = () => {
 
       {/* Summary cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-green-100 p-4 rounded shadow">
+        <div className="bg-green-100 dark:bg-green-900  p-4 rounded shadow">
           <h3 className="text-lg font-semibold">Total Payments</h3>
           <p className="text-2xl font-bold">
             {filteredPayments.length}
           </p>
         </div>
 
-        <div className="bg-blue-100 p-4 rounded shadow">
+        <div className="bg-blue-100 dark:bg-blue-900 p-4 rounded shadow">
           <h3 className="text-lg font-semibold">Total Amount</h3>
           <p className="text-2xl font-bold">
             ${totalAmount.toFixed(2)}
@@ -75,11 +75,11 @@ const Payments = () => {
 
       {/* Filter input */}
       <div className="mb-4 w-full md:w-1/3 relative">
-        <FiSearch className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" />
+        <FiSearch className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400 dark:text-gray-400" />
         <input
           type="text"
           placeholder="Filter by email"
-          className="border p-2 pl-10 rounded w-full bg-green-50"
+          className="border p-2 pl-10 rounded w-full bg-green-50  dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
@@ -88,7 +88,7 @@ const Payments = () => {
       {/* Payments table */}
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full">
-          <thead className="bg-gray-200">
+          <thead className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
             <tr>
               <th>No</th>
               <th>Transaction ID</th>
@@ -101,7 +101,7 @@ const Payments = () => {
             </tr>
           </thead>
 
-          <tbody className="bg-gray-50">
+          <tbody className="bg-gray-50 dark:bg-gray-900">
             {filteredPayments.map((payment, index) => (
               <tr key={payment._id}>
                 <th>{index + 1}</th>

@@ -116,7 +116,7 @@ const ReportIssueForm = () => {
 
       {/* **Block Warning Banner** */}
       {isBlocked && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6 shadow">
+        <div className="bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-300 px-4 py-3 rounded relative mb-6 shadow">
           <strong className="font-bold">Account Restricted! </strong>
           <span className="block sm:inline">You have been blocked by the admin. You can only view data but cannot submit new issues.</span>
         </div>
@@ -124,7 +124,7 @@ const ReportIssueForm = () => {
 
       <form
         onSubmit={handleSubmit(handleReport)}
-        className={`space-y-6 p-6 rounded-xl shadow ${isBlocked ? "bg-red-50" : "bg-gray-100"}`}
+        className={`space-y-6 p-6 rounded-xl shadow ${isBlocked ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100  dark:bg-gray-800"}`}
       >
         <div>
           <label className="block mb-2 font-medium">Issue Title</label>

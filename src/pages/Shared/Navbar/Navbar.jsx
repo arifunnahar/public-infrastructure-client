@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import useAuth from '../../hooks/useAuth';
@@ -10,6 +10,28 @@ const Navbar = () => {
   const { user, logOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
+
+
+
+
+
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleTheme = (checked) => {
+    setTheme(checked ? "dark" : "light");
+  };
+
+
+
+
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -19,7 +41,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed w-full bg-gray-100 z-10 shadow-sm">
+    <div className="fixed w-full dark:bg-gray-900 dark:text-white  z-10 shadow-sm">
       <div className="py-4 px-4 md:px-8 flex items-center justify-between">
         
         {/* Logo */}
@@ -35,7 +57,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? 'text-blue-600' : 'text-gray-700'
+                isActive ? 'text-blue-600' : 'text-gray-700  dark:text-white' 
               }
             >
               Home
@@ -45,7 +67,7 @@ const Navbar = () => {
             <NavLink
               to="/all-issues"
               className={({ isActive }) =>
-                isActive ? 'text-blue-600' : 'text-gray-700'
+                isActive ? 'text-blue-600' : 'text-gray-700  dark:text-white'
               }
             >
               All Issues
@@ -55,7 +77,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? 'text-blue-600' : 'text-gray-700'
+                isActive ? 'text-blue-600' : 'text-gray-700 dark:text-white'
               }
             >
               About
@@ -65,7 +87,7 @@ const Navbar = () => {
             <NavLink
               to="/contact-us"
               className={({ isActive }) =>
-                isActive ? 'text-blue-600' : 'text-gray-700'
+                isActive ? 'text-blue-600' : 'text-gray-700 dark:text-white'
               }
             >
               Contact Us
@@ -74,6 +96,18 @@ const Navbar = () => {
         </ul>
 
         {/* User dropdown */}
+
+              <input
+            type="checkbox"
+            className="toggle"
+            checked={theme === "dark"}
+            onChange={(e) => handleTheme(e.target.checked)}
+          />
+
+
+
+
+
         <div className="relative">
           <div
             onClick={() => setIsOpen(!isOpen)}
@@ -87,10 +121,14 @@ const Navbar = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-{/* .......................... */}
+          {/* .......................... */}
+
+
+           
+
           {/* Dropdown menu */}
           {isOpen && (
-            <div className="absolute right-0 mt-2 w-40 md:w-48 bg-white rounded-xl shadow-md overflow-hidden text-sm z-20">
+            <div className="absolute right-0 mt-2 w-40 md:w-48 bg-white dark:bg-gray-900  rounded-xl shadow-md overflow-hidden text-sm z-20">
               <div className="flex flex-col">
 
                 {/* Mobile links */}
@@ -130,13 +168,13 @@ const Navbar = () => {
                 {user ? (
                   <>
               
-                    <div className="px-4 py-2 font-bold text-lg  text-green-800 border-b bg-blue-200">
+                    <div className="px-4 py-2 font-bold text-lg  text-green-800 border-b bg-blue-200 dark:bg-gray-900">
                       {user.displayName ? user.displayName : "User"}
                     </div>
 
                     <Link
                       to="/dashboard"
-                      className="px-4 py-2 hover:bg-blue-200 bg-blue-100 transition font-semibold"
+                      className="px-4 py-2 hover:bg-blue-200  bg-blue-100 transition font-semibold dark:bg-gray-900"
                       onClick={() => setIsOpen(false)}
                     >
                       Dashboard
@@ -144,7 +182,7 @@ const Navbar = () => {
 
                     <div
                       onClick={handleLogOut}
-                      className="px-4 py-2 hover:bg-blue-200 bg-blue-100 transition font-semibold cursor-pointer"
+                      className="px-4 py-2 hover:bg-blue-200 bg-blue-100 transition font-semibold cursor-pointer dark:bg-gray-900"
                     >
                       Logout
                     </div>
@@ -153,14 +191,14 @@ const Navbar = () => {
                   <>
                     <Link
                       to="/login"
-                      className="px-4 py-2 hover:bg-neutral-100 transition font-semibold"
+                      className="px-4 py-2 hover:bg-neutral-200 transition font-semibold"
                       onClick={() => setIsOpen(false)}
                     >
                       Login
                     </Link>
                     <Link
                       to="/register"
-                      className="px-4 py-2 hover:bg-neutral-100 transition font-semibold"
+                      className="px-4 py-2 hover:bg-neutral-200 transition font-semibold"
                       onClick={() => setIsOpen(false)}
                     >
                       Sign Up

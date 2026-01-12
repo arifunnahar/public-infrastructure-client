@@ -112,8 +112,8 @@ const Profile = () => {
   };
 
   return (
-    <div className='flex justify-center items-center min-h-screen bg-gray-100 font-sans p-4'>
-      <div className='bg-white shadow-lg rounded-2xl md:w-4/5 lg:w-3/5 overflow-hidden'>
+    <div className='flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 font-sans p-4'>
+      <div className='bg-white  dark:bg-gray-800 shadow-lg rounded-2xl md:w-4/5 lg:w-3/5 overflow-hidden'>
         <img alt='cover' src={coverImg} className='w-full h-56 object-cover' />
 
         <div className='flex flex-col items-center justify-center p-4 -mt-16'>
@@ -158,19 +158,19 @@ const Profile = () => {
           )}
 
           <p className='mt-2 text-2xl font-bold text-gray-800 uppercase'>{user?.displayName || 'Anonymous'}</p>
-          <p className='text-sm text-gray-600 mb-4'>ID: {user?.uid}</p>
+          <p className='text-sm text-gray-600 dark:text-gray-400 mb-4'>ID: {user?.uid}</p>
 
           {/* Info & Buttons */}
-          <div className='w-full p-6 rounded-xl bg-green-50 border border-gray-100'>
+          <div className='w-full p-6 rounded-xl bg-green-50 dark:bg-gray-700 border border-gray-100'>
             <div className='flex flex-wrap items-center justify-between gap-4 text-sm'>
               <div className='flex flex-col md:flex-row gap-6'>
                 <div className='flex flex-col'>
-                  <span className='text-gray-400 font-medium'>Full Name</span>
-                  <span className='font-bold text-gray-700 text-lg'>{user?.displayName}</span>
+                  <span className='text-gray-400  font-medium'>Full Name</span>
+                  <span className='font-bold text-gray-700 dark:text-gray-100 text-lg'>{user?.displayName}</span>
                 </div>
                 <div className='flex flex-col'>
                   <span className='text-gray-400 font-medium'>Email</span>
-                  <span className='font-bold text-gray-700 text-lg'>{user?.email}</span>
+                  <span className='font-bold text-gray-700 dark:text-gray-100 text-lg'>{user?.email}</span>
                 </div>
               </div>
 
@@ -198,8 +198,8 @@ const Profile = () => {
 
       {/* Update Profile Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50 p-4 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl p-6 w-full max-w-md shadow-2xl animate__animated animate__zoomIn">
+        <div className="fixed inset-0 bg-black/40  flex justify-center items-center z-50 p-4 backdrop-blur-sm">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-md shadow-2xl animate__animated animate__zoomIn">
             <h2 className="text-xl font-bold mb-4 text-gray-800 border-b pb-2">Edit Profile</h2>
             <form onSubmit={handleUpdate} className="space-y-4">
               <div className="flex flex-col items-center">
@@ -208,10 +208,10 @@ const Profile = () => {
                   className="w-24 h-24 rounded-full object-cover border-2 border-green-500 mb-2 shadow-sm"
                   alt="Preview"
                 />
-                <span className="text-xs text-gray-600">Profile</span>
+                <span className="text-xs text-gray-600 dark:text-gray-400">Profile</span>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Full Name</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-400">Full Name</label>
                 <input
                   name="name"
                   type="text"
@@ -221,7 +221,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Change Photo</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-400">Change Photo</label>
                 <input
                   name="photo"
                   type="file"

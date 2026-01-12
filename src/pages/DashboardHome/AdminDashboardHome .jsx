@@ -73,6 +73,7 @@ const AdminDashboardHome = () => {
 
   return (
     <div className="p-6 space-y-10">
+      <h1 className="text-2xl font-bold mb-6">Admin Dashboard</h1>
       {/* Stats Cards */}
       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
         <StatCard title="Total Issues" value={totalIssues} color="blue" />
@@ -87,8 +88,8 @@ const AdminDashboardHome = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
         {/* Pie Chart */}
-        <div className="bg-green-50 p-4 rounded-xl shadow-md">
-          <h3 className="text-lg font-semibold mb-4 text-gray-700">Issues Status</h3>
+        <div className="bg-green-50 dark:bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-100">Issues Status</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -111,8 +112,8 @@ const AdminDashboardHome = () => {
         </div>
 
         {/*  Bar Chart */}
-        <div className="bg-green-50 p-4 rounded-xl shadow-md">
-          <h3 className="text-lg font-semibold mb-4 text-gray-700">Total Payments</h3>
+        <div className="bg-green-50 dark:bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-100">Total Payments</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={paymentsChartData}>
               <XAxis dataKey="name" />
@@ -127,14 +128,14 @@ const AdminDashboardHome = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Latest Issues */}
-        <div className="bg-green-50 p-4 rounded-xl shadow-md">
-          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700">Latest Issues</h3>
+        <div className="bg-green-50 dark:bg-gray-800  p-4 rounded-xl shadow-md">
+          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700 dark:text-gray-100">Latest Issues</h3>
          <ul className="space-y-3">
   {latestIssues.slice(0, 5).map((issue) => (
     <li key={issue._id} className="flex flex-col md:flex-row md:justify-between items-start md:items-center p-3 border rounded-lg hover:shadow-lg transition-shadow">
       <div>
-        <span className="font-semibold text-gray-800">{issue.title}</span>
-        <p className="text-sm text-gray-500">{issue.category} | {issue.location}</p>
+        <span className="font-semibold text-gray-800 dark:text-gray-200">{issue.title}</span>
+        <p className="text-sm text-gray-500 dark:text-gray-400">{issue.category} | {issue.location}</p>
       </div>
       <span
         className={`mt-2 md:mt-0 px-3 py-1 rounded-full text-sm font-semibold ${
@@ -152,8 +153,8 @@ const AdminDashboardHome = () => {
         </div>
 
         {/* Latest Payments */}
-        <div className="bg-green-50 p-4 rounded-xl shadow-md">
-          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700">Latest Payments</h3>
+        <div className="bg-green-50 dark:bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700 dark:text-gray-100 ">Latest Payments</h3>
           
           <ul className="space-y-3">
   {latestPayments.slice(0, 5).map((pay) => (
@@ -162,8 +163,8 @@ const AdminDashboardHome = () => {
       className="flex justify-between items-center p-3 border rounded-lg hover:shadow-lg transition-shadow"
     >
       <div>
-        <span className="font-semibold text-gray-800">{pay.customer}</span>
-        <p className="text-sm text-gray-500">{pay.paymentMethod}</p>
+        <span className="font-semibold text-gray-800 dark:text-gray-300">{pay.customer}</span>
+        <p className="text-sm text-gray-500 dark:text-gray-400">{pay.paymentMethod}</p>
       </div>
       <span
         className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -184,8 +185,8 @@ const AdminDashboardHome = () => {
         </div>
 
         {/* Latest Users */}
-        <div className="bg-green-50 p-4 rounded-xl shadow-md">
-          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700">Latest Users</h3>
+        <div className="bg-green-50 dark:bg-gray-800 p-4 rounded-xl shadow-md">
+          <h3 className="font-bold text-xl mb-4 border-b pb-2 text-gray-700 dark:text-gray-300">Latest Users</h3>
         <ul className="space-y-3">
   {latestUsers.slice(0, 5).map((user) => (
     <li
@@ -193,8 +194,8 @@ const AdminDashboardHome = () => {
       className="flex justify-between items-center p-3 border rounded-lg hover:shadow-lg transition-shadow"
     >
       <div>
-        <span className="font-semibold text-gray-800">{user.displayName || user.email}</span>
-        <p className="text-sm text-gray-500">{user.email}</p>
+        <span className="font-semibold text-gray-800 dark:text-gray-300">{user.displayName || user.email}</span>
+        <p className="text-sm text-gray-500 dark:text-gray-300">{user.email}</p>
       </div>
       <span
         className={`px-3 py-1 rounded-full text-sm font-semibold ${

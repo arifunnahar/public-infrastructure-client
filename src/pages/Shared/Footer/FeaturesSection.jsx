@@ -30,9 +30,14 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center">Our Features</h2>
-      <p className="text-gray-600 max-w-2xl text-center mx-auto mt-2">
+    <section className="max-w-6xl mx-auto px-6 py-16 
+      bg-white dark:bg-gray-900 transition-colors dark:rounded-xl duration-300">
+
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
+        Our Features
+      </h2>
+
+      <p className="text-gray-600 dark:text-gray-400 max-w-2xl text-center mx-auto mt-2">
         Explore the core features that make our infrastructure solutions modern, reliable, and efficient.
       </p>
 
@@ -40,12 +45,20 @@ const FeaturesSection = () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className="p-6 bg-gray-50 rounded-xl shadow-sm border hover:shadow-md transition"
+            className="p-6 rounded-xl border shadow-sm transition
+              bg-gray-50 dark:bg-gray-800
+              border-gray-200 dark:border-gray-700
+              hover:shadow-md dark:hover:shadow-lg"
           >
-            <div className="flex items-center gap-2 text-gray-700 font-semibold text-lg">
-              <CheckCircle size={20} /> {item.title}
+            <div className="flex items-center gap-2 font-semibold text-lg
+              text-gray-800 dark:text-gray-100">
+              <CheckCircle size={20} className="text-green-600 dark:text-green-400" />
+              {item.title}
             </div>
-            <p className="text-gray-700 mt-2">{item.desc}</p>
+
+            <p className="mt-2 text-gray-700 dark:text-gray-400">
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>

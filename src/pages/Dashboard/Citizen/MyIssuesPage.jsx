@@ -121,7 +121,7 @@ const MyIssuesPage = () => {
       {/* Edit Modal */}
       {editId && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-gray-100 p-6 rounded-xl shadow-xl w-96">
+          <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-xl w-96">
             <h2 className="text-xl font-bold mb-4">Edit Issue</h2>
             <div className="space-y-3">
               <label className="font-semibold">Title</label>
@@ -194,7 +194,7 @@ const MyIssuesPage = () => {
         <div className="overflow-x-auto mt-4">
           <table className="w-full -collapse text-sm">
             <thead>
-              <tr className="bg-gray-300">
+              <tr className="bg-gray-300 dark:bg-gray-800">
                 <th className="p-2">No</th>
                 <th className="p-2">Image</th>
                 <th className="p-2">Title</th>
@@ -206,7 +206,7 @@ const MyIssuesPage = () => {
                 <th className="p-2">Action</th>
               </tr>
             </thead>
-            <tbody className="bg-gray-100">
+            <tbody className="bg-gray-100 dark:bg-gray-900">
               {[...issues]
                 .sort((a, b) => {
                   const priorityA = a.priority?.toLowerCase();
