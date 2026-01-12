@@ -97,7 +97,11 @@ const Navbar = () => {
 
         {/* User dropdown */}
 
-              <input
+            
+
+        <div className='flex items-center gap-4'>
+          
+          <input
             type="checkbox"
             className="toggle"
             checked={theme === "dark"}
@@ -105,10 +109,8 @@ const Navbar = () => {
           />
 
 
-
-
-
         <div className="relative">
+           
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 md:p-2 border border-neutral-200 flex items-center gap-2 rounded-full cursor-pointer hover:shadow-md transition"
@@ -209,6 +211,9 @@ const Navbar = () => {
             </div>
           )}
         </div>
+</div>
+
+
       </div>
     </div>
   );
